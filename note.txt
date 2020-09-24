@@ -1,0 +1,41 @@
+mock 1
+    <div class="col row">
+        <div class="col-6 container-1">
+            <button class="btn btn-1" type="button" (click)="show()"> CLICK </button>
+            <div class="col dropdown" style="margin-top: 10px;">
+                <button class="btn btn-primary  dropdown-toggle" style="width: 300px;"
+                  type="button" id="menu1" data-toggle="dropdown" ng-click="toggled" ng-bind='selected'> {{selectedStation}}
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu scrollable-y" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" *ngFor="let station of listStation">
+                        <a class="btn btn3" role="menuitem" tabindex="-1" (click)="selectedStation=station"> {{station}} </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col dropdown" style="margin-top: 10px;">
+                <button class="btn btn-primary  dropdown-toggle" style="width: 300px;"
+                  type="button" id="menu1" data-toggle="dropdown" ng-click="toggled" ng-bind='selected'> {{selectedYear}}
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu scrollable-y" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" *ngFor="let year of listYear">
+                        <a class="btn btn3" role="menuitem" tabindex="-1" (click)="selectedYear=year"> {{year}} </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col dropdown" style="margin-top: 10px;">
+                <button class="btn btn-primary  dropdown-toggle" style="width: 300px;"
+                  type="button" id="menu1" data-toggle="dropdown" ng-click="toggled" ng-bind='selected'> {{selectedMonth}}
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu scrollable-y" role="menu" aria-labelledby="menu1">
+                    <li role="presentation" *ngFor="let month of listMonth">
+                        <a class="btn btn3" role="menuitem" tabindex="-1" (click)="selectedMonth=month"> {{month}} </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 card-value scrollable " style="margin-top: 20px;">
+            <div *ngFor="let value of listdata" > 
+                <a style="text-align: center;"> {{value}} </a>
+            </div>
+        </div>
+    </div>
